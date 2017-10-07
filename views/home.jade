@@ -1,0 +1,14 @@
+extends layout
+
+block content
+
+  link(rel='stylesheet', href='/stylesheets/home/home.css')
+
+  div.timePar
+    div.title 距过年还有
+    div.time-info
+        span.day #{day}
+        span 天
+
+  script(src="/javascripts/unit/vendor/jquery/jquery.min.js")
+  script(src="/javascripts/home/home.js")
