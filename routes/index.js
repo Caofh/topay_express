@@ -14,6 +14,40 @@ router.get('/', function(req, res, next) {
 //   res.send('Hello World!');
 // });
 
+/* GET 获取天气信息接口. */
+router.get('/getWeatherDetail', function(req, res, next) {
+  var weatherDetail = require(controllers + '/weatherDetail/weatherDetail.controller')
+  weatherDetail(req, res, next)
+});
+
+
+// focus_studio项目
+/* GET 获取项目信息接口. */
+router.get('/getProject', function(req, res, next) {
+  var getProject = require(controllers + '/focusStudio/project.controller').getProject
+  getProject(req, res, next)
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // 网站首页接受 POST 请求
 router.post('/', function (req, res) {
   res.send('Got a POST request');
